@@ -1,0 +1,20 @@
+package Pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class DetailProductPage {
+
+    WebDriver driver;
+
+    public DetailProductPage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+
+    @FindBy(css = "#product-price-1 span")
+    public WebElement productPrice;
+}
